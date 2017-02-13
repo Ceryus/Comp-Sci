@@ -13,7 +13,7 @@ class BlockTestOne
 		Block one = new Block();
 		out.println(one);
 
-		Block two = new Block(50,50,30,30);
+		Block two = new Block(30,30,30,30);
 		out.println(two);
 
 		Block three = new Block(350,350,15,15,Color.RED);

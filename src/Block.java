@@ -17,39 +17,31 @@ public class Block implements Locatable
 
 	public Block()
 	{
-
-
+		
 	}
 
 	//add other Block constructors - x , y , width, height, color
 	public Block(int x, int y)
 	{
-		xPos = x;
-		yPos = y;
-	}
-	
-	public Block(int x, int y, int w)
-	{
-		xPos = x;
-		yPos = y;
-		width = w;
+		setX(x);
+		setY(y);
 	}
 	
 	public Block(int x, int y, int w, int h)
 	{
-		xPos = x;
-		yPos = y;
-		width = w;
-		height = h;
+		setX(x);
+		setY(y);
+		setWidth(w);
+		setHeight(h);
 	}
 	
 	public Block(int x, int y, int w, int h, Color col)
 	{
-		xPos = x;
-		yPos = y;
-		width = w;
-		height = h;
-		color = col;
+		setX(x);
+		setY(y);
+		setWidth(w);
+		setHeight(h);
+		setColor(col);
 	}
 	
 	public void setX(int x)
@@ -124,16 +116,17 @@ public class Block implements Locatable
    
 	public boolean equals(Object obj)
 	{
-
-
-
-
+		Block block = (Block) obj;
+		if(block.getWidth() == this.getWidth() && block.getHeight() == this.getHeight() && block.getColor().equals(this.getColor()))
+		{
+			return true;
+		}
 		return false;
 	}
 
 	public String toString()
 	{
-		return getX() + getY() + getWidth() + getHeight() + getColor();
+		return getX()+" "+getY()+" "+getWidth()+" "+getHeight()+" "+getColor();
 	}
 
    //add the other get methods
