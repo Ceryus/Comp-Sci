@@ -31,6 +31,8 @@ class BallTestOne
 		
 		out.println(five.equals(four));		
 		
-		out.println(five.equals(five));										
+		out.println(five.equals(five));
+		
+		BallTestTwo btt = new BallTestTwo();
 	}
 }
